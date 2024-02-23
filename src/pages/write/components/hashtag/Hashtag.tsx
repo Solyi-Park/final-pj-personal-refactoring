@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import { GoPlus, GoSearch, GoX } from 'react-icons/go';
+// import { GoPlus, GoSearch, GoX } from 'react-icons/go';
+import { GoPlus } from '@react-icons/all-files/go/GoPlus';
+import { GoSearch } from '@react-icons/all-files/go/GoSearch';
+import { GoX } from '@react-icons/all-files/go/GoX';
 import { useRecoilState } from 'recoil';
 import { useModal } from 'hooks/useModal';
 import { postInputState } from 'recoil/posts';

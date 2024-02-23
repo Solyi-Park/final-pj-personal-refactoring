@@ -16,7 +16,11 @@ import { DocumentData, QueryDocumentSnapshot, arrayRemove, arrayUnion, doc, upda
 import { useModal } from 'hooks/useModal';
 import { QUERY_KEYS } from 'query/keys';
 import { useEffect, useState } from 'react';
-import { GoComment, GoEye, GoHeart, GoHeartFill } from 'react-icons/go';
+// import { GoComment, GoEye, GoHeart, GoHeartFill } from 'react-icons/go';
+import { GoComment } from '@react-icons/all-files/go/GoComment';
+import { GoEye } from '@react-icons/all-files/go/GoEye';
+import { GoHeart } from '@react-icons/all-files/go/GoHeart';
+import { GoHistory } from '@react-icons/all-files/go/GoHistory';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { modalState } from 'recoil/modals';
@@ -286,7 +290,7 @@ function CommunityPostList({ queryKey, queryFn, sortBy }: PostListProps) {
                           onClick={(e) => handleClickLikeButton(e, post.id, post)}
                           $isLiked={!!post.isLiked}
                         >
-                          {post.isLiked ? <GoHeartFill /> : <GoHeart />}
+                          {post.isLiked ? <GoHistory /> : <GoHeart />}
                         </HeartClickButton>
                       </PostCardHeader>
 

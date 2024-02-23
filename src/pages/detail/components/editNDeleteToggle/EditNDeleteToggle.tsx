@@ -2,7 +2,9 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { deletePost } from 'api/postApi';
 import { useModal } from 'hooks/useModal';
 import { QUERY_KEYS } from 'query/keys';
-import { GoPencil, GoTrash } from 'react-icons/go';
+// import { GoPencil, GoTrash } from 'react-icons/go';
+import { GoPencil } from '@react-icons/all-files/go/GoPencil';
+import { GoTrashcan } from '@react-icons/all-files/go/GoTrashcan';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { modalState } from 'recoil/modals';
@@ -91,7 +93,7 @@ function EditNDeleteToggle({ foundDetailPost }: FoundDetailPostProps) {
         <St.EditNDeleteSpan onClick={onDeletePostHandler}>
           삭제하기
           <div>
-            <GoTrash />
+            <GoTrashcan />
           </div>
         </St.EditNDeleteSpan>
       </St.ToggleContentContainer>

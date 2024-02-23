@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { GoChevronUp } from 'react-icons/go';
+// import { GoChevronUp } from 'react-icons/go';
+import { GoChevronUp } from '@react-icons/all-files/go/GoChevronUp';
 import styled from 'styled-components';
 
 interface TopButtonProps {
@@ -47,7 +48,7 @@ const StyledButton = styled.button<TopButtonProps>`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(34, 34, 34, 0.5); 
+  background-color: rgba(34, 34, 34, 0.5);
   color: #fff;
   border: none;
   cursor: pointer;

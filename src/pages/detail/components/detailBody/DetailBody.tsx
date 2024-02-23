@@ -4,8 +4,8 @@ import defaultImage from 'assets/defaultImg.jpg';
 import kakao from 'assets/detail/Kakao-icon.png';
 import link from 'assets/detail/link-bold-icon.png';
 import { useState } from 'react';
-import { GoComment } from 'react-icons/go';
-
+// import { GoComment } from 'react-icons/go';
+import { GoComment } from '@react-icons/all-files/go/GoComment';
 import { getComments } from 'api/commentApi';
 import defaultThumbnail from 'assets/mangoThumbnail.png';
 import useKaKaoShare from 'hooks/useKaKaoShare';

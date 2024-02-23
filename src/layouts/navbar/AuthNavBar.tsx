@@ -1,6 +1,7 @@
 import defaultImg from 'assets/defaultImg.jpg';
 import { useModal } from 'hooks/useModal';
-import { GoChevronDown } from 'react-icons/go';
+// import { GoChevronDown } from 'react-icons/go';
+import { GoChevronDown } from '@react-icons/all-files/go/GoChevronDown';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { modalState } from 'recoil/modals';

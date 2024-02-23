@@ -1,6 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { useContext, useEffect, useState } from 'react';
-import { GoCalendar, GoHeart, GoQuestion, GoTasklist } from 'react-icons/go';
+// import { GoCalendar, GoHeart, GoQuestion, GoTasklist } from 'react-icons/go';
+import { GoCalendar } from '@react-icons/all-files/go/GoCalendar';
+import { GoHeart } from '@react-icons/all-files/go/GoHeart';
+import { GoQuestion } from '@react-icons/all-files/go/GoQuestion';
+import { GoTasklist } from '@react-icons/all-files/go/GoTasklist';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { getMyPosts, getUserRanking } from 'api/myPostAPI';
 import postCountIcon from 'assets/icons/postCountIcon.png';

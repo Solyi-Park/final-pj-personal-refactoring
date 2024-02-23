@@ -5,7 +5,11 @@ import { AuthContext } from 'context/AuthContext';
 import { arrayRemove, arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { produce } from 'immer';
 import React, { useContext } from 'react';
-import { GoComment, GoEye, GoHeart, GoHeartFill } from 'react-icons/go';
+// import { GoComment, GoEye, GoHeart, GoHeartFill } from 'react-icons/go';
+import { GoComment } from '@react-icons/all-files/go/GoComment';
+import { GoEye } from '@react-icons/all-files/go/GoEye';
+import { GoHeart } from '@react-icons/all-files/go/GoHeart';
+import { GoHistory } from '@react-icons/all-files/go/GoHistory';
 import { useNavigate } from 'react-router-dom';
 import { db } from 'shared/firebase';
 import { PostType } from 'types/PostType';
@@ -113,7 +117,7 @@ function PostCard({ post }: PostCardProps) {
             </AuthorNameAndDate>
           </PostCardHeaderLeft>
           <HeartClickButton onClick={handleClickLikeButton} $isLiked={!!post.isLiked}>
-            {post.isLiked ? <GoHeartFill /> : <GoHeart />}
+            {post.isLiked ? <GoHistory /> : <GoHeart />}
           </HeartClickButton>
         </PostCardHeader>
 

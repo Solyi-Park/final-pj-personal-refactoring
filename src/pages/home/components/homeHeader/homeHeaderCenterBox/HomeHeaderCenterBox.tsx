@@ -1,4 +1,6 @@
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
+// import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
+import { GoChevronLeft } from '@react-icons/all-files/go/GoChevronLeft';
+import { GoChevronRight } from '@react-icons/all-files/go/GoChevronRight';
 import { SwiperClass } from 'swiper/react';
 import useSwiperNavigation from 'hooks/useSwiperNavigation';
 import { PostType } from 'types/PostType';

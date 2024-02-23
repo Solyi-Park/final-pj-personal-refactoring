@@ -1,7 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import React, { useContext, useRef, useState } from 'react';
-import { GoPencil } from 'react-icons/go';
+// import { GoPencil } from 'react-icons/go';
+import { GoPencil } from '@react-icons/all-files/go/GoPencil';
 import { useSetRecoilState } from 'recoil';
 import { updateProfileImage, updateProfileImageProps, updateProfileInfo, updateProfileInfoProps } from 'api/authApi';
 import defaultImg from 'assets/defaultImg.jpg';

@@ -1,7 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useRef } from 'react';
-import { GoTrash } from 'react-icons/go';
+// import { GoTrash } from 'react-icons/go';
+import { GoTrashcan } from '@react-icons/all-files/go/GoTrashcan';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { deleteImage, uploadSingleImage } from 'api/postApi';
 import DragNDrop from 'assets/icons/dragndrop.png';
@@ -241,7 +242,7 @@ function ImageUpload() {
                     <span>{imageUploadingStatus}</span>
                   </div>
                   <button onClick={() => onDeleteImageHandler(image)}>
-                    <GoTrash />
+                    <GoTrashcan />
                   </button>
                 </St.SinglePreviewInfo>
               </St.SinglePreview>

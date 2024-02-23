@@ -1,4 +1,6 @@
-import { GoHeart, GoHeartFill } from 'react-icons/go';
+// import { GoHeart, GoHeartFill } from 'react-icons/go';
+import { GoHeart } from '@react-icons/all-files/go/GoHeart';
+import { GoHistory } from '@react-icons/all-files/go/GoHistory';
 import styled from 'styled-components';
 import theme from 'types/styles/theme';
 
@@ -408,7 +410,7 @@ const HeartIcon = styled(GoHeart)`
   cursor: pointer;
 `;
 
-const HeartFillIcon = styled(GoHeartFill)`
+const HeartFillIcon = styled(GoHistory)`
   color: red;
   font-size: 26px;
   cursor: pointer;

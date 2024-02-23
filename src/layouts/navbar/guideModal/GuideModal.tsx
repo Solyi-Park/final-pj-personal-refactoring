@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import useSwiperNavigation from 'hooks/useSwiperNavigation';
 
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
+// import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
+import { GoChevronLeft } from '@react-icons/all-files/go/GoChevronLeft';
+import { GoChevronRight } from '@react-icons/all-files/go/GoChevronRight';
 import pageOne from 'assets/guide/1.png';
 import pageTwo from 'assets/guide/2.png';
 import pageThree from 'assets/guide/3.png';
