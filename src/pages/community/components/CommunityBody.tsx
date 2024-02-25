@@ -77,8 +77,8 @@ function CommunityBody() {
       await queryClient.prefetchInfiniteQuery({
         queryKey: queryKey,
         queryFn: queryFn,
-        initialPageParam: undefined,
-        staleTime: 60_000
+        initialPageParam: undefined
+        // staleTime: 60_000
       });
     }
   };

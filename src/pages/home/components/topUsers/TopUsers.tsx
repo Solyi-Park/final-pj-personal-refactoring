@@ -16,8 +16,8 @@ const TopUsers = () => {
     error: topUsersError
   } = useQuery({
     queryKey: [QUERY_KEYS.POSTS, QUERY_KEYS.TOPUSERS],
-    queryFn: getTopUsers,
-    staleTime: 60_000 * 5
+    queryFn: getTopUsers
+    // staleTime: 60_000 * 5
   });
 
   if (topUsersError) {
@@ -30,8 +30,8 @@ const TopUsers = () => {
     error: usersError
   } = useQuery({
     queryKey: [QUERY_KEYS.USERS],
-    queryFn: getAllUsers,
-    staleTime: 60_000 * 5
+    queryFn: getAllUsers
+    // staleTime: 60_000 * 5
   });
 
   if (usersError) {

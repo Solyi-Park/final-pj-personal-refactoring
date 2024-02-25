@@ -49,15 +49,15 @@ function NavBar() {
 
   // hover 시 prefetch 함수!
   //prefetch는 error 반환 x
-  const queryClient = useQueryClient();
-  const handleHover = async () => {
-    queryClient.prefetchInfiniteQuery({
-      queryKey: [QUERY_KEYS.POSTS, QUERY_KEYS.ADMIN],
-      queryFn: getAdminPostList,
-      initialPageParam: undefined as undefined | QueryDocumentSnapshot<DocumentData, DocumentData>,
-      staleTime: 60_000
-    });
-  };
+  // const queryClient = useQueryClient();
+  // const handleHover = async () => {
+  //   queryClient.prefetchInfiniteQuery({
+  //     queryKey: [QUERY_KEYS.POSTS, QUERY_KEYS.ADMIN],
+  //     queryFn: getAdminPostList,
+  //     initialPageParam: undefined as undefined | QueryDocumentSnapshot<DocumentData, DocumentData>
+  //     // staleTime: 60_000
+  //   });
+  // };
 
   //반응형 웹 (로그인/회원가입시 : navbar 히든 / 나머지는 : 보여지기)
   const [authCheck, setAuthCheck] = useRecoilState(isAuthState);
@@ -94,7 +94,8 @@ function NavBar() {
           <NavLink to="/about" style={styledNav}>
             ABOUT
           </NavLink>
-          <NavLink to="/bymango" style={styledNav} onMouseEnter={handleHover}>
+          {/* <NavLink to="/bymango" style={styledNav} onMouseEnter={handleHover}> */}
+          <NavLink to="/bymango" style={styledNav}>
             BY MANGO
           </NavLink>
           <NavLink to="/community" style={styledNav}>

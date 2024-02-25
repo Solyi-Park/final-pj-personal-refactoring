@@ -9,7 +9,15 @@ import AuthContextProvider from './context/AuthContext';
 import { ModalProvider } from './hooks/useModal';
 import { HelmetProvider } from 'react-helmet-async';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      refetchOnMount: false,
+      refetchOnReconnect: false
+    }
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

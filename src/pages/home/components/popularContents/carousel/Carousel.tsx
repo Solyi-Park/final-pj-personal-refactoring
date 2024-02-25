@@ -35,8 +35,8 @@ const Carousel = () => {
     error: popularPostsError
   } = useQuery({
     queryKey: [QUERY_KEYS.POSTS, QUERY_KEYS.POPULAR],
-    queryFn: getPopularPosts,
-    staleTime: 60_000 * 5
+    queryFn: getPopularPosts
+    // staleTime: 60_000 * 5
   });
   if (popularPostsError) {
     console.log('인기 게시물 가져오기 실패!', popularPostsError);
@@ -48,8 +48,8 @@ const Carousel = () => {
     error: usersError
   } = useQuery({
     queryKey: [QUERY_KEYS.USERS],
-    queryFn: getAllUsers,
-    staleTime: 60_000 * 5
+    queryFn: getAllUsers
+    // staleTime: 60_000 * 5
   });
 
   if (usersError) {

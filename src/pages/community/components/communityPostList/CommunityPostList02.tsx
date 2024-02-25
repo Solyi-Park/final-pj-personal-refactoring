@@ -84,7 +84,7 @@ function CommunityPostList02({ category, sortBy }: PostListProps) {
       const lastItem = lastPage[lastPage.length - 1];
       return lastItem.id;
     },
-    staleTime: 60_000,
+    // staleTime: 60_000,
     select: (data) => {
       let sortedPosts = data.pages.flat();
       if (sortBy === 'popularity') {
@@ -216,8 +216,8 @@ function CommunityPostList02({ category, sortBy }: PostListProps) {
     error: usersError
   } = useQuery({
     queryKey: [QUERY_KEYS.USERS],
-    queryFn: getAllUsers,
-    staleTime: 60_000 * 5
+    queryFn: getAllUsers
+    // staleTime: 60_000 * 5
   });
 
   if (usersError) {

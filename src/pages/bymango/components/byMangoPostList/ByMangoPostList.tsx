@@ -37,7 +37,7 @@ function ByMangoPostList({ queryKey, queryFn, sortBy }: PostListProps) {
       }
       return lastPage[lastPage.length - 1];
     },
-    staleTime: 60_000,
+    // staleTime: 60_000,
     select: (data) => {
       let sortedPosts = data.pages.flat().map((doc) => ({ id: doc.id, ...doc.data() } as PostType));
 

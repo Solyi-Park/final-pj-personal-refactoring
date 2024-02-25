@@ -38,7 +38,7 @@ const getAdminPosts = async () => {
     limit(4)
   );
   const querySnapshot = await getDocs(q);
-
+  console.log(querySnapshot);
   const posts: PostType[] = [];
   querySnapshot.forEach((doc) => {
     const postData = doc.data() as Omit<PostType, 'id'>;

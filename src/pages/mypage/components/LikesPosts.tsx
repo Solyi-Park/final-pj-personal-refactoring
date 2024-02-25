@@ -17,8 +17,8 @@ const LikesPosts = () => {
     error
   } = useQuery({
     queryKey: [QUERY_KEYS.POSTS, { likedPosts: true }],
-    queryFn: getLikePosts,
-    staleTime: 60_000
+    queryFn: getLikePosts
+    // staleTime: 60_000
   });
 
   if (error) {

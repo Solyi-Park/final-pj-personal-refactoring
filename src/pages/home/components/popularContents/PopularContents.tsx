@@ -16,8 +16,8 @@ const PopularContents = () => {
     queryClient.prefetchInfiniteQuery({
       queryKey: [QUERY_KEYS.POSTS, QUERY_KEYS.TOTAL],
       queryFn: () => getFirstPage('total'),
-      initialPageParam: undefined,
-      staleTime: 60_000 * 5
+      initialPageParam: undefined
+      // staleTime: 60_000 * 5
     });
   };
 

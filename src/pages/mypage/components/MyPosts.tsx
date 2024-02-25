@@ -19,8 +19,8 @@ const MyPosts = () => {
   } = useQuery({
     queryKey: [QUERY_KEYS.POSTS, 'myPosts'],
     queryFn: getMyPosts,
-    enabled: !!authCurrentUser,
-    staleTime: 60_000
+    enabled: !!authCurrentUser
+    // staleTime: 60_000
   });
 
   if (error) {

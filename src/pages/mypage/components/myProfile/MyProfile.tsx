@@ -37,7 +37,7 @@ function MyProfile() {
   } = useQuery({
     queryKey: [QUERY_KEYS.POSTS, 'myPosts'],
     queryFn: getMyPosts,
-    staleTime: 60_000,
+    // staleTime: 60_000,
     enabled: !!authCurrentUser
   });
 

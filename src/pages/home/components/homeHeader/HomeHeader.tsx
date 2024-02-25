@@ -23,8 +23,8 @@ const HomeHeader = () => {
     error
   } = useQuery({
     queryKey: [QUERY_KEYS.POSTS, QUERY_KEYS.ADMIN, QUERY_KEYS.SELECTEDFOUR],
-    queryFn: getAdminPosts,
-    staleTime: 60_000
+    queryFn: getAdminPosts
+    // staleTime: 60_000
   });
 
   if (error) {

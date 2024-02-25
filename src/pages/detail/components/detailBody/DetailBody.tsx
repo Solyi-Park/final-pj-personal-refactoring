@@ -27,8 +27,8 @@ function DetailBody({ foundDetailPost }: FoundDetailPostProps) {
 
   const { data: author, error } = useQuery({
     queryKey: [QUERY_KEYS.USERS, foundDetailPost.uid],
-    queryFn: () => getUser(foundDetailPost.uid),
-    staleTime: 60_000
+    queryFn: () => getUser(foundDetailPost.uid)
+    // staleTime: 60_000
   });
 
   if (error) {
@@ -38,8 +38,8 @@ function DetailBody({ foundDetailPost }: FoundDetailPostProps) {
   // 댓글목록 가져오기
   const { data: comments } = useQuery({
     queryKey: [QUERY_KEYS.COMMENTS, foundDetailPost.id],
-    queryFn: () => getComments(foundDetailPost.id),
-    staleTime: Infinity
+    queryFn: () => getComments(foundDetailPost.id)
+    // staleTime: Infinity
   });
 
   //카카오톡 공유

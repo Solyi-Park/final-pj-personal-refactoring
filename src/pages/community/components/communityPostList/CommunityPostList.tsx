@@ -88,7 +88,7 @@ function CommunityPostList({ queryKey, queryFn, sortBy }: PostListProps) {
       }
       return lastPage[lastPage.length - 1];
     },
-    staleTime: 60_000,
+    // staleTime: 60_000,
     select: (data) => {
       let sortedPosts = data.pages.flat().map((doc) => {
         const postData = doc.data() as { likedUsers: string[] | undefined }; // 'likedUsers' 속성이 포함된 형식으로 타입 캐스팅
@@ -246,8 +246,8 @@ function CommunityPostList({ queryKey, queryFn, sortBy }: PostListProps) {
     error: usersError
   } = useQuery({
     queryKey: [QUERY_KEYS.USERS],
-    queryFn: getAllUsers,
-    staleTime: 60_000 * 5
+    queryFn: getAllUsers
+    // staleTime: 60_000 * 5
   });
 
   if (usersError) {

@@ -15,8 +15,8 @@ type Props = {
 function PostShift({ postId }: Props) {
   const { data: postList, error } = useQuery({
     queryKey: [QUERY_KEYS.POSTS],
-    queryFn: getPosts,
-    staleTime: 60_000
+    queryFn: getPosts
+    // staleTime: 60_000
   });
 
   if (error) {

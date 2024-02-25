@@ -24,8 +24,8 @@ const CommentList = ({ foundDetailPost }: FoundDetailPostProps) => {
 
   const { data: users, error: usersError } = useQuery({
     queryKey: [QUERY_KEYS.USERS],
-    queryFn: getAllUsers,
-    staleTime: 60_000 * 5
+    queryFn: getAllUsers
+    // staleTime: 60_000 * 5
   });
 
   if (usersError) {
@@ -35,8 +35,8 @@ const CommentList = ({ foundDetailPost }: FoundDetailPostProps) => {
   // 댓글목록 가져오기
   const { data: comments, error: CommentError } = useQuery({
     queryKey: [QUERY_KEYS.COMMENTS, postId],
-    queryFn: () => getComments(postId),
-    staleTime: 60_000
+    queryFn: () => getComments(postId)
+    // staleTime: 60_000
   });
   if (CommentError) {
     console.log('댓글 목록 가져오기 실패!', CommentError);

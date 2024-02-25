@@ -27,8 +27,8 @@ function Detail() {
   } = useQuery<PostType>({
     queryKey: [QUERY_KEYS.POSTS, id],
     queryFn: () => getDetailPost(id!),
-    enabled: !!id,
-    staleTime: 60_000
+    enabled: !!id
+    // staleTime: 60_000
   });
 
   if (error) {

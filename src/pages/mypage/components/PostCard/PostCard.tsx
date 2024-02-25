@@ -88,8 +88,8 @@ function PostCard({ post }: PostCardProps) {
 
   const { data: users, error: usersError } = useQuery({
     queryKey: [QUERY_KEYS.USERS],
-    queryFn: getAllUsers,
-    staleTime: 60_000 * 5
+    queryFn: getAllUsers
+    // staleTime: 60_000 * 5
   });
 
   if (usersError) {
